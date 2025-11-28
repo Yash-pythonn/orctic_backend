@@ -4,5 +4,6 @@ djangorestframework
 djangorestframework-simplejwt
 PyJWT
 bcrypt
+gunicorn
 
 
