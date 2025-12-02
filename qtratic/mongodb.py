@@ -8,12 +8,10 @@ from django.conf import settings
 def get_mongo_client():
     """
     Get MongoDB client connection.
-    Returns a MongoClient instance connected to the local MongoDB.
+    Returns a MongoClient instance connected to MongoDB Atlas.
+    Uses the connection string from settings for MongoDB Atlas connection.
     """
-    return MongoClient(
-        host=settings.MONGO_HOST,
-        port=settings.MONGO_PORT
-    )
+    return MongoClient(settings.MONGO_CONNECTION_STRING)
 
 
 def get_mongo_db(db_name=None):

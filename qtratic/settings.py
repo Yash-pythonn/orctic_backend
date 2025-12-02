@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'users',
     'categories',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -122,10 +123,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MongoDB Configuration
-MONGO_HOST = 'localhost'
-MONGO_PORT = 27017
+MONGO_CONNECTION_STRING = 'mongodb+srv://yashpp5545_db_user:XvPn1Nkv0ok798yt@otratic.oufewvf.mongodb.net/admin?retryWrites=true&loadBalanced=false&replicaSet=atlas-jvka71-shard-0&readPreference=primary&srvServiceName=mongodb&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1'
 MONGO_DB_NAME = 'qtratic_db'
-MONGO_CONNECTION_STRING = f'mongodb://{MONGO_HOST}:{MONGO_PORT}/'
 
 # REST Framework Configuration
 REST_FRAMEWORK = {
