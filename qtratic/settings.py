@@ -123,7 +123,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MongoDB Configuration
-# MONGO_CONNECTION_STRING = 'mongodb+srv://yashpp5545_db_user:XvPn1Nkv0ok798yt@otratic.oufewvf.mongodb.net/admin?retryWrites=true&loadBalanced=false&replicaSet=atlas-jvka71-shard-0&readPreference=primary&srvServiceName=mongodb&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1'
+MONGO_CONNECTION_STRING = "mongodb+srv://yashpp5545_db_user:XvPn1Nkv0ok798yt@otratic.oufewvf.mongodb.net/otratic?retryWrites=true&w=majority&tls=true"
 MONGO_DB_NAME = 'qtratic_db'
 
 # REST Framework Configuration
