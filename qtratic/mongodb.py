@@ -7,11 +7,15 @@ from django.conf import settings
 
 def get_mongo_client():
     """
-    Get MongoDB client connection.
-    Returns a MongoClient instance connected to MongoDB Atlas.
-    Uses the connection string from settings for MongoDB Atlas connection.
+    Create a MongoDB client with proper TLS settings for Render.
     """
-    return MongoClient(settings.MONGO_CONNECTION_STRING)
+    return MongoClient(
+        settings.MONGO_CONNECTION_STRING,
+        tls=True,
+        tlsAllowInvalidCertificates=True,   # IMPORTANT for Render
+        serverSelectionTimeoutMS=5000,
+        connectTimeoutMS=5000,
+    )
 
 
 def get_mongo_db(db_name=None):
