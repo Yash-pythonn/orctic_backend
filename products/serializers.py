@@ -13,7 +13,7 @@ class PriceSerializer(serializers.Serializer):
     """Serializer for product price object."""
 
     amount = serializers.DecimalField(max_digits=12, decimal_places=2)
-    currency = serializers.CharField(max_length=3, default='USD')
+    currency_symbol = serializers.CharField(max_length=3, default='₹')
 
     def validate_currency(self, value):
         value = (value or '').strip().upper()

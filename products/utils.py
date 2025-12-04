@@ -255,6 +255,7 @@ def _build_category_snapshot(category_doc):
         'id': str(category_doc.get('_id')),
         'name': category_doc.get('name'),
         'slug': category_doc.get('slug'),
+        'category_for': category_doc.get('category_for')
     }
 
 
@@ -274,7 +275,7 @@ def _normalize_price(price):
         return {'amount': 0.0, 'currency': 'USD'}
     return {
         'amount': float(price.get('amount', 0.0)),
-        'currency': (price.get('currency') or 'USD').upper(),
+        'currency_symbol':price.get('currency_symbol', '₹')
     }
 
 
